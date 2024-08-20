@@ -1,26 +1,16 @@
 class Bank{
 	private:
-		std::string m_name;
-		std::string m_password;
-		double m_balance;
-		int m_id;
+		Account* arr;
+		int capacity;
+		int count;
 	public:
 		Bank();
-		Bank(std::string name, std::string passowrd, double balance, int id);
-
-		// Getters
-		int getId();
-		double getBalance();
-		std::string getPassword();
-		std::string getName();
+		~Bank();
 		
-		// Setters
-		void setId(int id);
-		void setBalance(double balance);
-		void setPassword(std::string password);
-		void setName(std::string name);
+		void addAccount();
+		void addAccount(std::string name, double balance);
 		
-		void Deposit(int money);
-		void Withdraw(int money);	
-		void printInfo();
+		void setInformation(const int index);
+			
+		void printInfo(int index);
 };
