@@ -8,7 +8,7 @@ class Bank{
 		~Bank();
 		
 		void addAccount();
-		void addAccount(std::string name, double balance);
+		void addAccount(std::string& name, double balance);
 		
 		void setInformation(const int index);
 			

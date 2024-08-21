@@ -29,7 +29,7 @@ void Bank::addAccount(){
         ++count;
 }
 
-void Bank::addAccount(std::string name, double balance){
+void Bank::addAccount(std::string& name, double balance){
 	
 	if(count == capacity){
 		capacity *= 2;

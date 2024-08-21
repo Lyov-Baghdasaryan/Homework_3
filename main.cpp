@@ -11,9 +11,9 @@ int main(){
 	account1.Withdraw(1050);
 	account1.printInfo();
 	*/
-
+	std::string name = "Alex";
 	Bank AEB;
-	//AEB.addAccount("Alex", 34000);
+	AEB.addAccount(name, 34000);
 	//AEB.printInfo(0);
 
 	return 0;
