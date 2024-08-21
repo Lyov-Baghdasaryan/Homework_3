@@ -50,7 +50,7 @@ void Bank::addAccount(std::string name, double balance){
 }
 
 void Bank::setInformation(const int index){
-	if(index <= count){
+	if(index >= 0 && index <= count){
 		std::string name;
 		std::cout << "Enter informations for User number : " << index << std::endl;
 		std::cout << "Name -> "; 
@@ -61,9 +61,11 @@ void Bank::setInformation(const int index){
 		std::cout << "Balance -> ";
 		std::cin >> balance;
 		arr[index].setBalance(balance);
-	}	
+	}
 }
 
 void Bank::printInfo(int index){
-	arr[index].printInfo();
+	if(index >= 0 && index <= count){		
+		arr[index].printInfo();
+	}
 }
